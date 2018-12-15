@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>Spring Boot Web Thymeleaf About Page Example</h1>
+        <h2>
+            <span th:text="'Book list'"></span>
+        </h2>
+    </div>
+    <div>
+        <table>
+            <tbody>
+            <tr th:if="${books.empty}">
+                <td colspan="2"> No Books Available</td>
+            </tr>
+            <th:block th:each="book : ${books}">
+                <tr>
+                    <td><span th:text="${book.title}"> Title </span></td>
+                    <td><span th:text="${book.author}"> Author </span></td>
+                    <td><span th:text="${book.isbn}"> ISBN </span></td>
+                </tr>
+            </th:block>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>
