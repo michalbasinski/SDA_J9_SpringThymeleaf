@@ -18,10 +18,10 @@
     <div>
         <table>
             <tbody>
-            <tr th:if="${books.empty}">
+            <tr th:if="${booksDtos.empty}">
                 <td colspan="2"> No Books Available</td>
             </tr>
-            <th:block th:each="book : ${books}">
+            <th:block th:each="book : ${booksDtos}">
                 <tr>
                     <td><span th:text="${book.title}"> Title </span></td>
                     <td><span th:text="${book.author}"> Author </span></td>
